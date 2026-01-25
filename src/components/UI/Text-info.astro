@@ -1,0 +1,27 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    link: string;
+    class?: string;
+    classSpan?: string;
+}
+
+const { title, description, link, class: className, classSpan } = Astro.props;
+
+const baseStyleDiv =
+    "flex flex-col gap-6 justify-center align-center items-center mx-4 my-12";
+const baseStyleH2 = "font-fraunces text-4xl font-[900] text-center";
+const baseStyleP = "font-barlow text-lg text-center text-grey-600";
+const baseStyleA = "font-fraunces text-xl uppercase  font-[700] text-center";
+const baseStyleSpan =
+    "relative z-10 after:absolute after:bottom-1 after:left-0 after:-z-10 after:h-1.5 after:w-full after:rounded-full after:bg-red-400/60 hover:after:bg-red-400 transition-all duration-300 ease-in-out";
+---
+
+<div class:list={[baseStyleDiv, className]}>
+    <h2 class={baseStyleH2}>{title}</h2>
+    <p class={baseStyleP}>{description}</p>
+    <span class:list={[baseStyleSpan, classSpan]}>
+        <a href="#" class={baseStyleA}>{link}</a>
+    </span>
+</div>
