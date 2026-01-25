@@ -1,2 +1,14 @@
 ---
+interface Props {
+    src: string;
+    alt: string;
+    class?: string;
+}
+
+const { src, alt, class: className } = Astro.props;
+const baseStyle = "";
 ---
+
+<div class:list={[baseStyle, className]}>
+    <img src={src} alt={alt} />
+</div>

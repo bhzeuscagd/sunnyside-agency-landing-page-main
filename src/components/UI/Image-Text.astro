@@ -1,0 +1,29 @@
+---
+interface Props {
+    src: string;
+    alt?: string;
+    title: string;
+    description: string;
+    class?: string;
+}
+
+const {
+    src,
+    alt = "Background image",
+    title,
+    description,
+    class: className,
+} = Astro.props;
+
+const containerStyle =
+    "relative z-20 flex flex-col justify-end items-center text-center px-0 py-12 h-[600px] w-full isolate";
+const imageStyle = "absolute inset-0 w-full h-full object-cover -z-10";
+const headingStyle = "font-fraunces text-4xl text-grey-950 font-[900] mb-6";
+const textStyle = "font-barlow text-sm text-grey-950 mx-6 text-center";
+---
+
+<div class:list={[containerStyle, className]}>
+    <img src={src} alt={alt} class={imageStyle} />
+    <h2 class={headingStyle}>{title}</h2>
+    <p class={textStyle}>{description}</p>
+</div>

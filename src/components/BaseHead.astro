@@ -1,6 +1,8 @@
 ---
 import Icons from "./UI/Icons.astro";
 import TextInfo from "./UI/Text-info.astro";
+import Image from "./UI/Image.astro";
+import ImageText from "./UI/Image-Text.astro";
 ---
 
 <TextInfo
@@ -10,4 +12,22 @@ import TextInfo from "./UI/Text-info.astro";
     classSpan="after:bg-yellow-500/50 hover:after:bg-yellow-500"
 />
 
-<!-- BaseHead component -->
+<ImageText
+    src="src/assets/mobile/image-photography.jpg"
+    alt="illustration-transform"
+    title="Photography"
+    description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+/>
+
+<Image
+    src="src/assets/mobile/image-transform.jpg"
+    alt="illustration-transform"
+    class="w-full"
+/>
+
+<ImageText
+    src="src/assets/mobile/image-graphic-design.jpg"
+    alt="illustration-transform"
+    title="Graphic design"
+    description="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
+/>
