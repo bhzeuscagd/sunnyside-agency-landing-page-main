@@ -29,10 +29,15 @@ const textStyle = "font-barlow text-sm text-grey-950 mx-6 text-center";
         desktopSrc ? (
             <picture class={imageStyle}>
                 <source media="(min-width: 768px)" srcset={desktopSrc} />
-                <img src={src} alt={alt} class="w-full h-full object-cover" />
+                <img
+                    src={src}
+                    alt={alt}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                />
             </picture>
         ) : (
-            <img src={src} alt={alt} class={imageStyle} />
+            <img src={src} alt={alt} class={imageStyle} loading="lazy" />
         )
     }
     <h2 class={headingStyle}>{title}</h2>
