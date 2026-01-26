@@ -1,5 +1,23 @@
 ---
-
+import Icons from "./UI/Icons.astro";
+import Navbar from "./Navbar.astro";
 ---
 
-<!-- Hero component -->
+<section class="w-full min-h-[600px] flex flex-col justify-center items-center">
+    <img
+        src="src/assets/mobile/image-header.jpg"
+        alt="image-header"
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+    />
+    <div class="flex flex-col items-center text-center gap-6">
+        <h1
+            class="font-fraunces text-5xl tracking-[4px] text-white uppercase text-center mb-6 font-[900]"
+        >
+            We are creatives
+        </h1>
+        <Icons
+            name="icon-icon-arrow-down"
+            class="w-10 h-auto text-white animate-bounce"
+        />
+    </div>
+</section>

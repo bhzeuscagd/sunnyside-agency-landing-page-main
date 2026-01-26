@@ -1,5 +1,38 @@
 ---
-
+import Icons from "./UI/Icons.astro";
 ---
 
+<footer
+    class="flex flex-col items-center text-center justify-center gap-8 bg-green-500 py-16"
+>
+    <Icons name="icon-logo" class="w-48 h-auto text-green-800" />
+    <nav>
+        <ul class="flex flex-row gap-12 my-8">
+            <li>
+                <a
+                    class="text-green-800 font-barlow font-semibold text-xl"
+                    href="#">About</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-green-800 font-barlow font-semibold text-xl"
+                    href="#">Services</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-green-800 font-barlow font-semibold text-xl"
+                    href="#">Projects</a
+                >
+            </li>
+        </ul>
+    </nav>
+    <div class="flex flex-row gap-6">
+        <Icons name="icon-icon-facebook" class="w-8 h-auto text-green-800" />
+        <Icons name="icon-icon-instagram" class="w-8 h-auto text-green-800" />
+        <Icons name="icon-icon-twitter" class="w-8 h-auto text-green-800" />
+        <Icons name="icon-icon-pinterest" class="w-8 h-auto text-green-800" />
+    </div>
+</footer>
 <!-- Footer component -->

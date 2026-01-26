@@ -1,0 +1,26 @@
+---
+interface Props {
+    src: string;
+    alt?: string;
+    testimnial: string;
+    name: string;
+    position: string;
+    class?: string;
+}
+
+const { src, alt, testimnial, name, position, class: className } = Astro.props;
+
+const stylebase =
+    "flex flex-col items-center text-center justify-center gap-6 mx-6 py-12";
+const styleImage = "w-24 h-24 rounded-full";
+const styleText = "font-barlow text-grey-600 text-lg";
+const styleName = "font-fraunces text-grey-950 text-lg font-[900]";
+const stylePosition = "font-barlow text-grey-400 text-sm font-[600]";
+---
+
+<div class={stylebase}>
+    <img src={src} alt={alt} class={styleImage} />
+    <p class={styleText}>{testimnial}</p>
+    <p class={styleName}>{name}</p>
+    <p class={stylePosition}>{position}</p>
+</div>
