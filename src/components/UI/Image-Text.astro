@@ -1,6 +1,7 @@
 ---
 interface Props {
     src: string;
+    desktopSrc?: string;
     alt?: string;
     title: string;
     description: string;
@@ -9,6 +10,7 @@ interface Props {
 
 const {
     src,
+    desktopSrc,
     alt = "Background image",
     title,
     description,
@@ -23,7 +25,16 @@ const textStyle = "font-barlow text-sm text-grey-950 mx-6 text-center";
 ---
 
 <div class:list={[containerStyle, className]}>
-    <img src={src} alt={alt} class={imageStyle} />
+    {
+        desktopSrc ? (
+            <picture class={imageStyle}>
+                <source media="(min-width: 768px)" srcset={desktopSrc} />
+                <img src={src} alt={alt} class="w-full h-full object-cover" />
+            </picture>
+        ) : (
+            <img src={src} alt={alt} class={imageStyle} />
+        )
+    }
     <h2 class={headingStyle}>{title}</h2>
     <p class={textStyle}>{description}</p>
 </div>

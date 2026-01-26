@@ -12,10 +12,10 @@ const { src, alt, testimnial, name, position, class: className } = Astro.props;
 
 const stylebase =
     "flex flex-col items-center text-center justify-center gap-6 mx-6 py-12";
-const styleImage = "w-24 h-24 rounded-full";
-const styleText = "font-barlow text-grey-600 text-lg";
-const styleName = "font-fraunces text-grey-950 text-lg font-[900]";
-const stylePosition = "font-barlow text-grey-400 text-sm font-[600]";
+const styleImage = "w-24 h-24 rounded-full md:w-20 md:h-20";
+const styleText = "font-barlow text-grey-600 text-lg md:text-sm";
+const styleName = "font-fraunces text-grey-950 text-lg font-[900] md:text-sm";
+const stylePosition = "font-barlow text-grey-400 text-sm font-[600] md:text-xs";
 ---
 
 <div class={stylebase}>

@@ -3,32 +3,37 @@ import Testimnials from "./UI/Ui-testimnials.astro";
 ---
 
 <section
-    class="w-full min-h-[600px] flex flex-col justify-center items-center my-16"
+    class="w-full min-h-[600px] flex flex-col justify-center items-center my-16 gap-12 md:px-12"
 >
     <h2
         class="font-fraunces text-lg tracking-[4px] uppercase text-gray-400 font-[900] text-center"
     >
         Client Testimonials
     </h2>
-    <Testimnials
-        src="src/assets/image-emily.jpg"
-        alt="emily"
-        testimnial="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
-        name="Emily R."
-        position="Marketing Director"
-    />
-    <Testimnials
-        src="src/assets/image-thomas.jpg"
-        alt="thomas"
-        testimnial="Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience."
-        name="Thomas S."
-        position="Chief Operating Officer."
-    />
-    <Testimnials
-        src="src/assets/image-jennie.jpg"
-        alt="jennie"
-        testimnial="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
-        name="Jennie F."
-        position="Business Owner"
-    />
+
+    <div
+        class="flex flex-col items-center justify-center md:flex-row md:justify-between md:items-start md:gap-12"
+    >
+        <Testimnials
+            src="src/assets/image-emily.jpg"
+            alt="emily"
+            testimnial="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
+            name="Emily R."
+            position="Marketing Director"
+        />
+        <Testimnials
+            src="src/assets/image-thomas.jpg"
+            alt="thomas"
+            testimnial="Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience."
+            name="Thomas S."
+            position="Chief Operating Officer."
+        />
+        <Testimnials
+            src="src/assets/image-jennie.jpg"
+            alt="jennie"
+            testimnial="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
+            name="Jennie F."
+            position="Business Owner"
+        />
+    </div>
 </section>

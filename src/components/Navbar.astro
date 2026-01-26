@@ -2,10 +2,49 @@
 import Icons from "./UI/Icons.astro";
 ---
 
-<!-- Navbar component -->
-<header class="flex flex-col mx-6 mt-10">
-    <div class="flex flex-row justify-between">
+<header class="flex flex-col mx-6 mt-10 md:mx-12 relative z-50">
+    <div class="flex flex-row justify-between items-center">
         <Icons name="icon-logo" class="w-32 h-auto text-white" />
-        <Icons name="icon-icon-hamburger" class="w-8 h-auto text-white" />
+
+        <!-- CSS Toggle Logic -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label
+            for="menu-toggle"
+            class="md:hidden cursor-pointer focus:outline-none"
+        >
+            <Icons name="icon-icon-hamburger" class="w-8 h-auto text-white" />
+        </label>
+
+        <nav class="hidden md:flex flex-row gap-12 items-center">
+            <a href="#" class="font-barlow text-white text-lg">About</a>
+            <a href="#" class="font-barlow text-white text-lg">Services</a>
+            <a href="#" class="font-barlow text-white text-lg">Projects</a>
+            <a
+                href="#"
+                class="font-fraunces text-gray-800 bg-white uppercase text-sm font-bold py-4 px-8 rounded-full hover:bg-white/30 hover:text-white transition-all duration-300 hover:cursor-pointer"
+                >Contact</a
+            >
+        </nav>
+
+        <!-- Mobile Menu controlled by peer-checked -->
+        <div
+            class="hidden peer-checked:flex absolute top-20 left-0 right-0 bg-white flex-col items-center gap-8 py-10 px-2 mx-auto w-full max-w-[90%] shadow-xl z-50 transition-all duration-300 transform origin-top-right before:content-[''] before:absolute before:-top-6 before:right-0 before:border-[12px] before:border-transparent before:border-r-white before:border-b-white"
+        >
+            <a href="#" class="font-barlow text-gray-600 text-xl font-semibold"
+                >About</a
+            >
+            <a href="#" class="font-barlow text-gray-600 text-xl font-semibold"
+                >Services</a
+            >
+            <a href="#" class="font-barlow text-gray-600 text-xl font-semibold"
+                >Projects</a
+            >
+            <a
+                href="#"
+                class="font-fraunces text-gray-900 bg-yellow-400 uppercase text-lg font-bold py-4 px-8 rounded-full hover:bg-yellow-300 transition-colors duration-300 cursor-pointer"
+                >Contact</a
+            >
+        </div>
     </div>
 </header>

@@ -5,31 +5,45 @@ import ImageText from "./UI/Image-Text.astro";
 import Testimnials from "./UI/Ui-testimnials.astro";
 ---
 
-<section class="grid grid-cols-1">
-    <Image src="src/assets/mobile/image-transform.jpg" alt="Transform image" />
+<section class="grid grid-cols-1 md:grid-cols-2">
+    <Image
+        src="src/assets/mobile/image-transform.jpg"
+        desktopSrc="src/assets/desktop/image-transform.jpg"
+        alt="Transform image"
+        class="md:order-2"
+    />
     <TextInfo
         title="Transform your brand"
         description="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
         link="Learn more"
         classSpan="after:bg-yellow-200/60 hover:after:bg-yellow-200"
+        class="md:order-1"
     />
-    <Image src="src/assets/mobile/image-stand-out.jpg" alt="Stand out image" />
+    <Image
+        src="src/assets/mobile/image-stand-out.jpg"
+        desktopSrc="src/assets/desktop/image-stand-out.jpg"
+        alt="Stand out image"
+        class="md:order-3"
+    />
     <TextInfo
         title="Stand out to the right audience"
         description="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places."
         link="Learn more"
         classSpan="after:bg-red-200/60 hover:after:bg-red-200"
+        class="md:order-4"
     />
     <ImageText
         src="src/assets/mobile/image-graphic-design.jpg"
+        desktopSrc="src/assets/desktop/image-graphic-design.jpg"
         title="Graphic Design"
         description="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
-        class="text-teal-800"
+        class="text-teal-800 md:order-5"
     />
     <ImageText
         src="src/assets/mobile/image-photography.jpg"
+        desktopSrc="src/assets/desktop/image-photography.jpg"
         title="Photography"
         description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
-        class="text-blue-800"
+        class="text-blue-800 md:order-6"
     />
 </section>

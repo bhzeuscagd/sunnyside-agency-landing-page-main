@@ -1,14 +1,24 @@
 ---
 interface Props {
     src: string;
+    desktopSrc?: string;
     alt: string;
     class?: string;
 }
 
-const { src, alt, class: className } = Astro.props;
+const { src, desktopSrc, alt, class: className } = Astro.props;
 const baseStyle = "";
 ---
 
 <div class:list={[baseStyle, className]}>
-    <img src={src} alt={alt} />
+    {
+        desktopSrc ? (
+            <picture>
+                <source media="(min-width: 768px)" srcset={desktopSrc} />
+                <img src={src} alt={alt} class="w-full h-full object-cover" />
+            </picture>
+        ) : (
+            <img src={src} alt={alt} />
+        )
+    }
 </div>
