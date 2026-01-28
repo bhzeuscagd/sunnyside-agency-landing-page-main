@@ -5,9 +5,17 @@ interface Props {
     link: string;
     class?: string;
     classSpan?: string;
+    ariaLabel?: string;
 }
 
-const { title, description, link, class: className, classSpan } = Astro.props;
+const {
+    title,
+    description,
+    link,
+    class: className,
+    classSpan,
+    ariaLabel,
+} = Astro.props;
 
 const baseStyleDiv =
     "flex flex-col gap-8 justify-center items-center md:items-start mx-6 my-12 md:mx-0 md:px-16 lg:px-28";
@@ -24,6 +32,6 @@ const baseStyleSpan =
     <h2 class={baseStyleH2}>{title}</h2>
     <p class={baseStyleP}>{description}</p>
     <span class:list={[baseStyleSpan, classSpan]}>
-        <a href="#" class={baseStyleA}>{link}</a>
+        <a href="#" class={baseStyleA} aria-label={ariaLabel}>{link}</a>
     </span>
 </div>
